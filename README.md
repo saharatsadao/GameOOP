@@ -48,22 +48,72 @@
 
 ---
 
-## วิธีการติดตั้ง
+## สิ่งที่ต้องเตรียม (Prerequisites)
 
-1. **เตรียมสภาพแวดล้อม:**
+หากเครื่องของคุณยังไม่มีสิ่งที่จำเป็นสำหรับการรัน Python ให้ทำตามขั้นตอนนี้ก่อน:
+
+1. **ติดตั้ง Python:**
+   - ดาวน์โหลดได้ที่ [python.org](https://www.python.org/downloads/) (แนะนำเวอร์ชัน 3.10 ขึ้นไป)
+   - **สำคัญ:** ขณะติดตั้งบน Windows อย่าลืมติ๊กถูกที่ช่อง **"Add Python to PATH"**
+
+2. **ตรวจสอบการติดตั้ง:**
+   เปิด Terminal หรือ Command Prompt แล้วพิมพ์:
    ```bash
-   python -m venv venv
-   venv\Scripts\activate  # สำหรับ Windows
+   python --version
    ```
 
-2. **ติดตั้ง Library:**
+---
+
+## วิธีการเริ่มต้นใช้งาน (Getting Started)
+
+### 1. การ Clone Repository
+เริ่มต้นด้วยการ Clone โปรเจกต์ไปยังเครื่องของคุณ:
+```bash
+git clone https://github.com/saharatsadao/GameOOP.git
+cd GameOOP
+```
+
+### 2. วิธีการติดตั้ง (Installation)
+
+เราแนะนำให้ใช้งานผ่าน **Virtual Environment** เพื่อไม่ให้กระทบกับ Library อื่นในเครื่อง:
+
+1. **สร้าง Virtual Environment:**
+   ```bash
+   # สำหรับ Windows
+   python -m venv venv
+   
+   # สำหรับ macOS/Linux
+   python3 -m venv venv
+   ```
+
+2. **การ Activate (เปิดใช้งาน):**
+   ```bash
+   # สำหรับ Windows
+   venv\Scripts\activate
+   
+   # สำหรับ macOS/Linux
+   source venv/bin/activate
+   ```
+
+3. **ติดตั้ง Library ที่เกี่ยวข้อง:**
+   เมื่อสถาณะใน Terminal มีคำว่า `(venv)` ขึ้นข้างหน้าแล้ว ให้พิมพ์:
    ```bash
    pip install -r requirements.txt
    ```
 
-## วิธีการใช้งาน
+---
 
-เริ่มเกมโดยการรันไฟล์ `main.py`:
+## วิธีการใช้งาน (Usage)
+เมื่อติดตั้งเรียบร้อยแล้ว สามารถเริ่มเกมได้โดยการรันไฟล์ `main.py`:
+
 ```bash
 python main.py
 ```
+
+### การควบคุม (Controls)
+| การกระทำ | ปุ่มกด |
+| :--- | :--- |
+| **เคลื่อนที่ซ้าย/ขวา** | `A` / `D` หรือ `Arrow Left` / `Arrow Right` |
+| **กระโดด** | `Spacebar` / `W` / `Up` / `K` |
+| **กลับหน้าเมนู** | `Esc` |
+| **เลือกเมนู** | `Mouse Left Click` หรือ `Enter` |
